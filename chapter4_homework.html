@@ -1,0 +1,31 @@
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <title>Stories</title>
+</head>
+<body>
+<div class="container">
+    <h1>This is me!</h1>
+    <ul class="list-group">
+        <li v-for="(value, key, index) in params" :key="index" class="list-group-item">
+            {{index}} : {{key}} = {{value}}
+        </li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js"></script>
+<script type="text/javascript">
+    new Vue({
+        el: '.container',
+        data: {
+            params: {
+                name: "Vassilliy",
+                height: "1.73m",
+                weight: "60kg",
+                eyeColor: "brown",
+                favoriteFood: "plov"
+            }
+        }
+    })
+</script>
+</html>
